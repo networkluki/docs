@@ -1,0 +1,23 @@
+- key: networkluki.com
+  name: networkluki.com
+  category: Main website
+  description: Documentation for the NetworkLuki website and its related services.
+  url: https://www.networkluki.com/
+  path: /sites/networkluki.com/
+  monogram: NL
+
+- key: theinfo.nu
+  name: theinfo.nu
+  category: Developer tools
+  description: Documentation for theinfo.nu tools, services, and integrations.
+  url: https://theinfo.nu/
+  path: /sites/theinfo.nu/
+  monogram: TI
+
+- key: ipconfig.se
+  name: ipconfig.se
+  category: Network utilities
+  description: Documentation for network utilities and published interfaces.
+  url: https://ipconfig.se/
+  path: /sites/ipconfig.se/
+  monogram: IP

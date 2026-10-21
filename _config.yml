@@ -1,0 +1,9 @@
+title: "NetworkLuki Docs"
+description: "Documentation for NetworkLuki websites and services."
+url: "https://docs.networkluki.com"
+baseurl: ""
+markdown: kramdown
+timezone: "Europe/Stockholm"
+exclude:
+  - README.md
+  - _templates/

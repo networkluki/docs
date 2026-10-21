@@ -1,1 +1,46 @@
-works
+---
+layout: default
+title: Home
+description: Central documentation portal for NetworkLuki websites, tools, and services.
+permalink: /
+---
+<section class="hero">
+  <span class="eyebrow"><span class="status-dot" aria-hidden="true"></span> NetworkLuki / Knowledge Base</span>
+  <h1>Documentation for<br><span class="gradient-text">everything we build.</span></h1>
+  <p>One place for technical guides, reference material, and documentation across NetworkLuki websites and services.</p>
+  <a class="primary-link" href="#websites">Explore websites <span aria-hidden="true">→</span></a>
+</section>
+
+<section id="websites" class="websites-section" aria-labelledby="websites-title">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">Browse documentation</span>
+      <h2 id="websites-title">Websites</h2>
+    </div>
+    <span class="section-kicker">{{ site.data.websites.size }} collections</span>
+  </div>
+
+  <div class="site-grid">
+    {% for website in site.data.websites %}
+    <a class="site-card" href="{{ website.path | relative_url }}">
+      <div class="site-card-top">
+        <span class="site-icon" aria-hidden="true">{{ website.monogram | escape }}</span>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+      </div>
+      <span class="site-category">{{ website.category | escape }}</span>
+      <h3>{{ website.name | escape }}</h3>
+      <p>{{ website.description | escape }}</p>
+      <span class="site-card-link">View documentation <span aria-hidden="true">→</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="contribute" aria-labelledby="contribute-title">
+  <div>
+    <span class="eyebrow">Built for growth</span>
+    <h2 id="contribute-title">Add documentation as you build.</h2>
+    <p>Each website has its own directory. Write Markdown articles and they appear automatically in the corresponding website's index.</p>
+  </div>
+  <a class="secondary-link" href="https://github.com/networkluki/docs/blob/main/README.md" target="_blank" rel="noopener noreferrer">Contributor guide ↗</a>
+</section>
