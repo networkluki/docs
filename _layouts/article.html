@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign website_info = site.data.websites | where: "key", page.website | first %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Docs</a>
+  <span aria-hidden="true">/</span>
+  <a href="{{ website_info.path | relative_url }}">{{ website_info.name | escape }}</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">{{ page.title | escape }}</span>
+</nav>
+
+<article class="article">
+  <header class="article-header">
+    <div class="eyebrow">{{ page.section | default: "Documentation" | capitalize | escape }}</div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p>{{ page.description | escape }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+  <footer class="article-footer">
+    <a href="{{ website_info.path | relative_url }}">← All {{ website_info.name | escape }} docs</a>
+  </footer>
+</article>

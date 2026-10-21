@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign website_info = site.data.websites | where: "key", page.website | first %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Docs</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">{{ website_info.name | escape }}</span>
+</nav>
+
+<section class="page-heading">
+  <div class="eyebrow">Website documentation</div>
+  <h1>{{ website_info.name | escape }}</h1>
+  <p>{{ website_info.description | escape }}</p>
+  <a class="inline-link" href="{{ website_info.url }}" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
+</section>
+
+{% if content != "" %}
+  <div class="intro-copy">{{ content }}</div>
+{% endif %}
+
+<section class="docs-section" aria-labelledby="documents-title">
+  <div class="section-heading">
+    <h2 id="documents-title">Documentation</h2>
+    <span class="section-kicker">Articles and guides</span>
+  </div>
+  {% assign documents = site.pages | where: "website", page.website | where: "layout", "article" | sort: "nav_order" %}
+  {% if documents.size > 0 %}
+    <div class="document-list">
+      {% for document in documents %}
+      <a class="document-row" href="{{ document.url | relative_url }}">
+        <span class="document-title">{{ document.title | escape }}</span>
+        <span class="document-meta">{{ document.section | default: "General" | capitalize | escape }}</span>
+        <span class="document-arrow" aria-hidden="true">↗</span>
+      </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <h3>No articles published yet</h3>
+      <p>This area is ready for documentation. Add Markdown articles under <code>sites/{{ page.website | escape }}/</code> to populate the list automatically.</p>
+    </div>
+  {% endif %}
+</section>

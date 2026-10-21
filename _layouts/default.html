@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <title>{% if page.title and page.title != "Home" %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="NetworkLuki Docs home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NetworkLuki <strong>Docs</strong></span>
+      </a>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}#websites">Websites</a>
+        <a href="https://github.com/networkluki/docs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell main-content" id="main">{{ content }}</main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© {{ 'now' | date: '%Y' }} NetworkLuki</span>
+      <span>Documentation hosted with GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>
