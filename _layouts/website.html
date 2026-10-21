@@ -10,7 +10,10 @@ layout: default
 
 <section class="page-heading">
   <div class="eyebrow">Website documentation</div>
-  <h1>{{ website_info.name | escape }}</h1>
+  <div class="page-title-row">
+    {% if website_info.icon %}<img class="page-icon" src="{{ website_info.icon | relative_url }}" width="56" height="56" alt="">{% endif %}
+    <h1>{{ website_info.name | escape }}</h1>
+  </div>
   <p>{{ website_info.description | escape }}</p>
   <a class="inline-link" href="{{ website_info.url }}" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
 </section>

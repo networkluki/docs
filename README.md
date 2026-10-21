@@ -17,6 +17,11 @@ docs/
 │   └── article.html
 ├── _templates/article.md         # Example article front matter
 ├── assets/css/site.css            # Shared styling
+├── assets/icons/                 # Docs favicon and per-website SVG icons
+│   ├── docs.svg
+│   ├── networkluki.svg
+│   ├── theinfo.svg
+│   └── ipconfig.svg
 ├── index.html                     # Documentation homepage
 ├── 404.html
 └── sites/
@@ -36,9 +41,11 @@ The URL in this example is **https://docs.networkluki.com/sites/ipconfig.se/api/
 
 ## Add a new website
 
-1. Add its `key`, `name`, `category`, `description`, `url`, `path` and `monogram` to `_data/websites.yml`.
+1. Add its `key`, `name`, `category`, `description`, `url`, `path` and `monogram` to `_data/websites.yml`. Add `icon: /assets/icons/example.svg` for a custom icon (otherwise the monogram is shown).
 2. Create `sites/example.com/index.md` with `layout: website`, `website: example.com` and `permalink: /sites/example.com/`.
 3. Add articles beneath `sites/example.com/` using the article template.
+
+SVG icons are kept in `assets/icons/`. `docs.svg` is the browser favicon and header logo. Website icons are referenced through the `icon` field in `_data/websites.yml` and displayed on site cards and documentation landing pages. Keep SVGs self-contained: no scripts, external references or remote assets.
 
 Use one website key consistently in the registry, landing page and each article. All URLs are paths under **docs.networkluki.com**, not separate DNS subdomains.
 
