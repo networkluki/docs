@@ -4,6 +4,7 @@
   description: Documentation for the NetworkLuki website and its related services.
   url: https://www.networkluki.com/
   path: /sites/networkluki.com/
+  icon: /assets/icons/networkluki.svg
   monogram: NL
 
 - key: theinfo.nu
@@ -12,6 +13,7 @@
   description: Documentation for theinfo.nu tools, services, and integrations.
   url: https://theinfo.nu/
   path: /sites/theinfo.nu/
+  icon: /assets/icons/theinfo.svg
   monogram: TI
 
 - key: ipconfig.se
@@ -20,4 +22,5 @@
   description: Documentation for network utilities and published interfaces.
   url: https://ipconfig.se/
   path: /sites/ipconfig.se/
+  icon: /assets/icons/ipconfig.svg
   monogram: IP

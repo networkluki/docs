@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>NetworkLuki</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2463BC"/>
+      <stop offset="1" stop-color="#443B91"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="url(#bg)" stroke="#7095E5" stroke-width="2"/>
+  <path d="M18 45V19L46 45V19" fill="none" stroke="#F5FAFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 19L46 45" fill="none" stroke="#B2DAFF" stroke-width="2" stroke-linecap="round"/>
+</svg>

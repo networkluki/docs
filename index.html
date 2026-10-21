@@ -24,7 +24,11 @@ permalink: /
     {% for website in site.data.websites %}
     <a class="site-card" href="{{ website.path | relative_url }}">
       <div class="site-card-top">
-        <span class="site-icon" aria-hidden="true">{{ website.monogram | escape }}</span>
+        {% if website.icon %}
+        <img class="site-icon" src="{{ website.icon | relative_url }}" width="50" height="50" loading="lazy" decoding="async" alt="">
+        {% else %}
+        <span class="site-icon site-icon-fallback" aria-hidden="true">{{ website.monogram | escape }}</span>
+        {% endif %}
         <span class="card-arrow" aria-hidden="true">↗</span>
       </div>
       <span class="site-category">{{ website.category | escape }}</span>
