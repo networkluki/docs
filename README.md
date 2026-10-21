@@ -27,26 +27,26 @@ docs/
 
 ## Add an article to an existing website
 
-1. Copy \u0060_templates/article.md\u0060 into a new directory, for example \u0060sites/ipconfig.se/api/ip-address/index.md\u0060.
-2. Set \u0060layout: article\u0060 and \u0060website: ipconfig.se\u0060 in the YAML front matter.
-3. Set \u0060title\u0060, \u0060description\u0060, \u0060section\u0060 and \u0060nav_order\u0060. For example, sections can be \u0060guides\u0060, \u0060api\u0060, \u0060security\u0060, \u0060deployment\u0060 or \u0060operations\u0060.
+1. Copy `_templates/article.md` into a new directory, for example `sites/ipconfig.se/api/ip-address/index.md`.
+2. Set `layout: article` and `website: ipconfig.se` in the YAML front matter.
+3. Set `title`, `description`, `section` and `nav_order`. For example, sections can be `guides`, `api`, `security`, `deployment` or `operations`.
 4. Add and verify Markdown content, then commit the article.
 
-The URL in this example is **https://docs.networkluki.com/sites/ipconfig.se/api/ip-address/**. The article automatically appears in the ipconfig.se list because its front matter specifies the corresponding \u0060website\u0060 key.
+The URL in this example is **https://docs.networkluki.com/sites/ipconfig.se/api/ip-address/**. The article automatically appears in the ipconfig.se list because its front matter specifies the corresponding `website` key.
 
 ## Add a new website
 
-1. Add its \u0060key\u0060, \u0060name\u0060, \u0060category\u0060, \u0060description\u0060, \u0060url\u0060, \u0060path\u0060 and \u0060monogram\u0060 to \u0060_data/websites.yml\u0060.
-2. Create \u0060sites/example.com/index.md\u0060 with \u0060layout: website\u0060, \u0060website: example.com\u0060 and \u0060permalink: /sites/example.com/\u0060.
-3. Add articles beneath \u0060sites/example.com/\u0060 using the article template.
+1. Add its `key`, `name`, `category`, `description`, `url`, `path` and `monogram` to `_data/websites.yml`.
+2. Create `sites/example.com/index.md` with `layout: website`, `website: example.com` and `permalink: /sites/example.com/`.
+3. Add articles beneath `sites/example.com/` using the article template.
 
 Use one website key consistently in the registry, landing page and each article. All URLs are paths under **docs.networkluki.com**, not separate DNS subdomains.
 
 ## Publishing
 
-- GitHub Pages should publish from the \u0060main\u0060 branch root (or an equivalent Jekyll-compatible Pages build).
-- Keep \u0060CNAME\u0060 at the publication root with only \u0060docs.networkluki.com\u0060.
-- This site uses GitHub Pages' built-in Jekyll processing. **Do not add a \u0060.nojekyll\u0060 file**, because Markdown articles and layouts must be rendered.
+- GitHub Pages should publish from the `main` branch root (or an equivalent Jekyll-compatible Pages build).
+- Keep `CNAME` at the publication root with only `docs.networkluki.com`.
+- This site uses GitHub Pages' built-in Jekyll processing. **Do not add a `.nojekyll` file**, because Markdown articles and layouts must be rendered.
 - GitHub Pages changes become live after deployment; review changes in a pull request first.
 
 ## Local preview and verification
@@ -54,10 +54,10 @@ Use one website key consistently in the registry, landing page and each article.
 If Jekyll is installed locally, run:
 
 ```bash
-bundle exec jekyll serve --host 127.0.0.1
+jekyll serve --host 127.0.0.1
 ```
 
-Then open \u0060http://127.0.0.1:4000/\u0060. Verify that all website cards work, and that new articles appear in the appropriate website's article list.
+Then open `http://127.0.0.1:4000/`. Verify that all website cards work, and that new articles appear in the appropriate website's article list.
 
 ## Security and content policy
 
