@@ -1,5 +1,8 @@
 # NetworkLuki Documentation
 
+**[Changelog / Release History](CHANGELOG.md)**
+
+
 Central GitHub Pages documentation portal for **https://docs.networkluki.com/**.
 
 Documentation is organized by website. Each website has its own landing page and automatically lists Markdown articles assigned to it.
